@@ -1,0 +1,257 @@
+@import "reset.css";
+/* =================шрифти===================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff");
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/Inter-Medium.woff2") format("woff2"), url("../fonts/Inter-Medium.woff") format("woff");
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/Inter-Black.woff2") format("woff2"), url("../fonts/Inter-Black.woff") format("woff");
+	font-display: swap;
+	font-weight: 900;
+	font-style: normal;
+}
+body{font-family: "Lato";
+	font-style: normal;
+	font-size: 18px;
+}
+.wrapper{
+	width: 100%;
+	/* overflow: hidden; */
+	position: relative;
+	min-height: 100%;
+	padding: 120px 50px 50px 50px;
+}
+.lesson {
+	background-color: rgba(128, 128, 128, 0.575);
+}
+.relative {
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 500px 600px;
+	max-width: 600px;
+	margin: 0 auto;
+}
+.man-united {
+	width: 100%;
+}
+.relative__famous {
+	position: relative;
+	left: 50px;
+	top: 30px;
+	z-index: 2;
+}
+.relative__sad {
+	position: relative;
+	right: 70px;
+	bottom: 40px;
+	z-index: 0;
+}
+.relative__train {
+	position: relative;
+	bottom: 100px;
+	left: 60px;
+	z-index: 1;
+}
+.absolute {padding-top: 800px;
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 500px 600px;
+	max-width: 1000px;
+	margin: 0 auto;
+	position: relative;
+}
+.absolute__famous {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.absolute__happy {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.absolute__sad {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.absolute__start {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.fixed {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	padding: 20px;
+	background-color: rgba(255, 0, 0, 0.863);
+	z-index: 100;
+}
+.fixed__container{
+	width: 600px;
+	margin: 0 auto;
+}
+.fixed__item{
+width: 100px;
+height: 80px;
+/* border: 0 solid yellowgreen; */
+display: inline-block;
+margin-right: 15px;
+}
+.fixed__item--famous::after{
+	content: "";
+	background: url(../img/jpg/famous.jpg) 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+}
+.fixed__item--happy::after{
+	content: "";
+		background: url(../img/jpg/happy.jpg) 0 0 / 100% no-repeat;
+		width: 100px;
+		height: 80px;
+		position: absolute;
+}
+.fixed__item--sad::after {
+	content: "";
+	background: url(../img/jpg/sad.jpg) 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+}
+.fixed__item--start::after {
+	content: "";
+	background: url(../img/jpg/start.jpg) 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+}
+.fixed__item--train::after {
+	content: "";
+	background: url(../img/jpg/train.jpg) 0 0 / 100% no-repeat;
+	width: 100px;
+	height: 80px;
+	position: absolute;
+}
+.fixed__item:hover::after {
+	bottom: 5px;
+}
+.sticky {
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 500px 600px;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 50px;
+}
+.sticky>div{
+	margin: 0 auto;
+	max-width: 300px;
+}
+.sticky__famous .man-united{
+	position: sticky;
+	top: 120px;
+
+}
+.sticky__text {
+	max-width: 300px;
+	background-color: red;
+	color: aquamarine;
+	padding: 5px;
+	line-height: 1.3;
+	position: sticky;
+		top: 120px;
+}
+.sticky__sad .man-united{
+	position: sticky;
+	top: 120px;
+}
+.sticky__train .man-united{
+	position: sticky;
+	top: 120px;
+}
+.car {
+	max-width: 800px;
+	padding: 150px;
+	margin: 0 auto;
+}
+.car__image {
+	position: relative;
+	z-index: 0;
+}
+.car__part-first {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.car__part-second {
+	position: absolute;
+	top: 0;
+	left: 233px;
+}
+.car__part-third {
+	position: absolute;
+	top: 0;
+	left: 467px;
+}
+.car__part-fourth {
+	position: absolute;
+	top: 155px;
+	left: 0;
+}
+.car__part-fifth {
+	position: absolute;
+	top: 155px;
+	left: 233px;
+}
+.car__part-sixth {
+	position: absolute;
+	top: 155px;
+	left: 467px;
+}
+.car__part-seventh {
+	position: absolute;
+	top: 310px;
+	left: 0;
+}
+.car__part-eighth {
+	position: absolute;
+	top: 310px;
+	left: 233px;
+}
+.car__part-ninth {
+	position: absolute;
+	top: 310px;
+	left: 467px;
+}
+.car__doctors {
+	position: relative;
+	top: 0;
+	left: 150px;
+	z-index: 1;
+}
+
+.car__girl {
+position: relative;
+bottom: 120px;
+left: 150px;
+z-index: 2;
+}
